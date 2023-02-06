@@ -2559,4 +2559,6 @@ footer .copyright span:last-child::after {
 	background: #000000;
 }
 
-/*# sourceMappingURL=main.css.map */
+/* Solid border */
+hr.solid {
+	border-top: 0.5px solid #bbb;
