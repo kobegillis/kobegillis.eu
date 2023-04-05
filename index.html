@@ -368,7 +368,7 @@
 <div class="col-md-7 ftco-animate text-center">
 <h2>I'm <span>Available</span> for freelancing</h2>
 <p>I am an experienced IT professional with expertise in networking, web design, and IT support. As a freelancer, I can provide you with top-quality services that meet your specific needs.</p>
-<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+<p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-5">Hire me</a></p>
 </div>
 </div>
 </div>
@@ -509,6 +509,19 @@ Copyright &copy; All rights reserved
 <script src="./js/jquery.animateNumber.min.js"></script>
 <script src="./js/scrollax.min.js"></script>
 <script src="./js/main.js"></script>
+<script>
+    $('a[href^="#"]').on('click', function(event) {
 
+        var target = $(this.getAttribute('href'));
+
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+
+    });
+</script>
 </body>
 </html>
